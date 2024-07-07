@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pastel_background">
+
+    <EditText
+        android:id="@+id/username_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textColor="@color/pastel_text"
+        android:textColorHint="@color/pastel_dark_blue"
+        android:padding="16dp"
+        android:layout_marginTop="100dp"/>
+
+    <EditText
+        android:id="@+id/password_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textColor="@color/pastel_text"
+        android:textColorHint="@color/pastel_dark_blue"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:layout_below="@id/username_edittext"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:background="@color/pastel_dark_blue"
+        android:layout_below="@id/password_edittext"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="onLoginClicked" />
+
+</RelativeLayout>
+
+

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Project1_S24</string>
+    <string name="baby_ducks_info">Baby ducks have their own name, they are known simply as ‘ducklings’, before this though they are called ‘hatchlings’ and are born from eggs, which are laid in a clutch inside a ‘nest’. As they grow, male ducks are known as ‘drake’, and female ducks are known as ‘hen’. A group of baby ducks are collectively known as a ‘brood’ of ducklings. In water they are sometimes collectively known as a ‘flock’ or a ‘waddle’ of ducklings. Baby ducks imprint shortly after birth. Imprinting is essentially when a duckling programs itself to follow one guardian (it’s mother) based on the first large moving object that it sees. Ducklings usually imprint in the first few hours of life - 12 to 36 hours after birth. This stage is known as the ‘sensitive’ or ‘critical stage’.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

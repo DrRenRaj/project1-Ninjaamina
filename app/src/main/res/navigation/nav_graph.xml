@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="edu.msudenver.cs3013.project1_s24.LoginFragment"
+        android:label="Login Fragment" />
+
+    <fragment
+        android:id="@+id/babyDucksInfoFragment"
+        android:name="edu.msudenver.cs3013.project1_s24.BabyDucksInfoFragment"
+        android:label="Baby Ducks Info Fragment" />
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="edu.msudenver.cs3013.project1_s24.QuizFragment"
+        android:label="Quiz Fragment" />
+
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="edu.msudenver.cs3013.project1_s24.ResultsFragment"
+        android:label="Results Fragment" />
+
+    <!-- Define navigation actions between fragments as per your app's flow -->
+    <action
+        android:id="@+id/action_loginFragment_to_babyDucksInfoFragment"
+        app:destination="@id/babyDucksInfoFragment" />
+
+    <action
+        android:id="@+id/action_babyDucksInfoFragment_to_quizFragment"
+        app:destination="@id/quizFragment" />
+
+    <action
+        android:id="@+id/action_quizFragment_to_resultsFragment"
+        app:destination="@id/resultsFragment" />
+</navigation>

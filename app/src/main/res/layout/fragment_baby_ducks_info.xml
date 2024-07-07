@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/pastel_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Baby ducks have their own name, they are known simply as ‘ducklings’, before this though they are called ‘hatchlings’ and are born from eggs, which are laid in a clutch inside a ‘nest’.\n\nAs they grow, male ducks are known as ‘drake’, and female ducks are known as ‘hen’.\n\nA group of baby ducks are collectively known as a ‘brood’ of ducklings. In water they are sometimes collectively known as a ‘flock’ or a ‘waddle’ of ducklings.\n\nBaby ducks imprint shortly after birth. Imprinting is essentially when a duckling programs itself to follow one guardian (it’s mother) based on the first large moving object that it sees.\n\nDucklings usually imprint in the first few hours of life - 12 to 36 hours after birth. This stage is known as the ‘sensitive’ or ‘critical stage’."
+        android:textColor="@color/pastel_text"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:backgroundTint="@color/pastel_dark_blue"
+        android:textColor="@color/white" />
+</LinearLayout>
+
