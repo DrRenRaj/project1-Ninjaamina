@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/babyDucksInfoFragment"
+        android:title="Baby Ducks Info" />
+    <item
+        android:id="@+id/quizFragment"
+        android:title="Quiz" />
+</menu>
