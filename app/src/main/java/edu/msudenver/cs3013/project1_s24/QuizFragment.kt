@@ -1,5 +1,6 @@
 package edu.msudenver.cs3013.project1_s24
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +22,8 @@ class QuizFragment : Fragment() {
     private var currentQuestionIndex = 0
     private var score = 0
 
+    private lateinit var mediaPlayer: MediaPlayer
+
     private val questions = listOf(
         "What are baby ducks called before they are known as ducklings?" to listOf("Hatchlings", "Puppies", "Kittens", "Chicks"),
         "What is a male duck called?" to listOf("Drake", "Hen", "Rooster", "Gander"),
@@ -34,12 +37,13 @@ class QuizFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_quiz, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        mediaPlayer = MediaPlayer.create(requireContext(), R.raw.duck_sound)
 
         questionTextView = view.findViewById(R.id.question_textview)
         optionsRadioGroup = view.findViewById(R.id.options_radiogroup)
@@ -55,6 +59,7 @@ class QuizFragment : Fragment() {
                 if (answer == answers[currentQuestionIndex]) {
                     score++
                 }
+                playSound()
                 currentQuestionIndex++
                 if (currentQuestionIndex < questions.size) {
                     showNextQuestion()
@@ -77,7 +82,25 @@ class QuizFragment : Fragment() {
         for (option in questions[currentQuestionIndex].second) {
             val radioButton = RadioButton(context)
             radioButton.text = option
+            radioButton.setOnClickListener {
+                playSound()
+            }
             optionsRadioGroup.addView(radioButton)
         }
     }
+
+    private fun playSound() {
+        mediaPlayer.start()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        mediaPlayer.release()
+    }
 }
+
+
+
+
+
+

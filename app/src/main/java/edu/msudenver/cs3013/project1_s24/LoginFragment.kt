@@ -1,5 +1,7 @@
 package edu.msudenver.cs3013.project1_s24
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +18,9 @@ class LoginFragment : Fragment() {
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
 
+    // SharedPreferences for storing login state
+    private lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,20 +31,27 @@ class LoginFragment : Fragment() {
         passwordEditText = view.findViewById(R.id.password_edittext)
         loginButton = view.findViewById(R.id.login_button)
 
+        // Initialize SharedPreferences
+        sharedPreferences = requireActivity().getSharedPreferences("login_prefs", Context.MODE_PRIVATE)
+
         loginButton.setOnClickListener {
             val username = usernameEditText.text.toString()
             val password = passwordEditText.text.toString()
 
             if (username == "duck" && password == "duckling") {
-                MainActivity.loggedIn = true
+                // Save logged-in state
+                sharedPreferences.edit().putBoolean("loggedIn", true).apply()
+                // Navigate to next fragment
                 findNavController().navigate(R.id.action_loginFragment_to_babyDucksInfoFragment)
             } else {
-                Toast.makeText(requireContext(), "Please retry! username or password invalid :)", Toast.LENGTH_SHORT)
-                    .show()
+        Toast.makeText(requireContext(), "Please retry! username or password invalid :)", Toast.LENGTH_SHORT).show()
             }
         }
         return view
     }
 }
+
+
+
 
 

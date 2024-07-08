@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
@@ -12,6 +13,12 @@
             android:id="@+id/action_babyDucksInfoFragment_to_quizFragment"
             app:destination="@id/quizFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/duckFeedingFragment"
+        android:name="edu.msudenver.cs3013.project1_s24.DuckFeedingFragment"
+        android:label="Duck Feeding"
+        tools:layout="@layout/fragment_duck_feeding" />
 
     <fragment
         android:id="@+id/quizFragment"
@@ -32,4 +39,15 @@
         android:name="edu.msudenver.cs3013.project1_s24.LoginFragment"
         android:label="Login Fragment" />
 
+    <fragment
+        android:id="@+id/duckSoundFragment"
+        android:name="edu.msudenver.cs3013.project1_s24.DuckSoundFragment"
+        android:label="Duck Sound Fragment" />
+
+    <fragment
+        android:id="@+id/duckFactsFragment"
+        android:name="edu.msudenver.cs3013.project1_s24.DuckFactsFragment"
+        android:label="Duck Facts Fragment" />
+
 </navigation>
+

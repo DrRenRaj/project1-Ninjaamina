@@ -4,26 +4,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 
-class ResultsFragment : Fragment() {
-
-    private lateinit var scoreTextView: TextView
+class DuckFactsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_results, container, false)
+        return inflater.inflate(R.layout.fragment_duck_facts, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        scoreTextView = view.findViewById(R.id.score_textview)
-
-        val score = arguments?.getInt("score", 0) ?: 0
-        scoreTextView.text = "Your score: $score"
+        println("DuckFactsFragment onViewCreated")
+        view.findViewById<View>(R.id.some_button)?.setOnClickListener {
+            println("Button clicked")
+        }
     }
 }
+
+

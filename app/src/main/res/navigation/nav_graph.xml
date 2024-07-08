@@ -24,6 +24,26 @@
         android:name="edu.msudenver.cs3013.project1_s24.ResultsFragment"
         android:label="Results Fragment" />
 
+    <fragment
+        android:id="@+id/duckFactsFragment"
+        android:name="edu.msudenver.cs3013.project1_s24.DuckFactsFragment"
+        android:label="Duck Facts Fragment" />
+
+    <fragment
+        android:id="@+id/duckFeedingFragment"
+        android:name="edu.msudenver.cs3013.project1_s24.DuckFeedingFragment"
+        android:label="Duck Feeding Fragment" />
+
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="edu.msudenver.cs3013.project1_s24.DuckGalleryFragment"
+        android:label="Gallery Fragment" />
+
+    <fragment
+        android:id="@+id/duckSoundFragment"
+        android:name="edu.msudenver.cs3013.project1_s24.DuckSoundFragment"
+        android:label="Duck Sound Fragment" />
+
     <!-- Define navigation actions between fragments as per your app's flow -->
     <action
         android:id="@+id/action_loginFragment_to_babyDucksInfoFragment"
@@ -37,3 +57,6 @@
         android:id="@+id/action_quizFragment_to_resultsFragment"
         app:destination="@id/resultsFragment" />
 </navigation>
+
+
+
